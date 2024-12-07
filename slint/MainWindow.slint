@@ -1,0 +1,1912 @@
+export component MainWindow inherits Window {
+    in-out property<bool> candidate-1-visible: true;
+    in-out property<length> candidate-1-button-x: 22px;
+    in-out property<length> candidate-1-button-y: 142px;
+    in-out property<string> candidate-1-name-text: "山田太郎";
+    in-out property<string> candidate-1-party-text: "○○党";
+    in-out property<bool> candidate-2-visible: true;
+    in-out property<length> candidate-2-button-x: 458px;
+    in-out property<length> candidate-2-button-y: 142px;
+    in-out property<string> candidate-2-name-text: "鈴木太郎";
+    in-out property<string> candidate-2-party-text: "○○党";
+    in-out property<bool> candidate-3-visible: true;
+    in-out property<length> candidate-3-button-x: 22px;
+    in-out property<length> candidate-3-button-y: 291px;
+    in-out property<string> candidate-3-name-text: "高橋太郎";
+    in-out property<string> candidate-3-party-text: "○○党";
+    in-out property<bool> candidate-4-visible: true;
+    in-out property<length> candidate-4-button-x: 458px;
+    in-out property<length> candidate-4-button-y: 291px;
+    in-out property<string> candidate-4-name-text: "佐藤太郎";
+    in-out property<string> candidate-4-party-text: "○○党";
+    in-out property<bool> candidate-highlighted-visible: true;
+    in-out property<length> candidate-highlighted-x: 0px;
+    in-out property<length> candidate-highlighted-y: 0px;
+    in-out property<length> candidate-highlighted-button-x: 449px;
+    in-out property<length> candidate-highlighted-button-y: 142px;
+    in-out property<string> candidate-highlighted-name-text: "鈴木太郎";
+    in-out property<string> candidate-highlighted-party-text: "○○党";
+    in-out property<bool> done-visible: false;
+    in-out property<bool> header-background-visible: true;
+    in-out property<bool> judge-1-checked-visible: true;
+    in-out property<bool> judge-1-checked2-visible: true;
+    in-out property<bool> judge-2-checked-visible: true;
+    in-out property<bool> judge-2-checked2-visible: true;
+    in-out property<bool> judge-3-checked-visible: true;
+    in-out property<bool> judge-3-checked2-visible: true;
+    in-out property<bool> judge-4-checked-visible: true;
+    in-out property<bool> judge-4-checked2-visible: true;
+    in-out property<string> message-text: "○○党　鈴木太郎";
+    in-out property<bool> national-review-of-supreme-court-justices-visible: false;
+    in-out property<bool> next-visible: true;
+    in-out property<bool> party-1-visible: true;
+    in-out property<length> party-1-button-x: 23px;
+    in-out property<length> party-1-button-y: 124px;
+    in-out property<string> party-1-name-text: "自由民主党";
+    in-out property<bool> party-2-visible: true;
+    in-out property<length> party-2-button-x: 457px;
+    in-out property<length> party-2-button-y: 124px;
+    in-out property<string> party-2-name-text: "立憲民主党";
+    in-out property<bool> party-3-visible: true;
+    in-out property<length> party-3-button-x: 23px;
+    in-out property<length> party-3-button-y: 213px;
+    in-out property<string> party-3-name-text: "公明党";
+    in-out property<bool> party-4-visible: true;
+    in-out property<length> party-4-button-x: 457px;
+    in-out property<length> party-4-button-y: 213px;
+    in-out property<string> party-4-name-text: "日本維新の会";
+    in-out property<bool> party-5-visible: true;
+    in-out property<length> party-5-button-x: 23px;
+    in-out property<length> party-5-button-y: 302px;
+    in-out property<string> party-5-name-text: "国民民主党";
+    in-out property<bool> party-6-visible: true;
+    in-out property<length> party-6-button-x: 457px;
+    in-out property<length> party-6-button-y: 300px;
+    in-out property<string> party-6-name-text: "日本共産党";
+    in-out property<bool> party-7-visible: true;
+    in-out property<length> party-7-button-x: 23px;
+    in-out property<length> party-7-button-y: 391px;
+    in-out property<string> party-7-name-text: "れいわ新選組";
+    in-out property<bool> party-8-visible: true;
+    in-out property<length> party-8-button-x: 457px;
+    in-out property<length> party-8-button-y: 391px;
+    in-out property<string> party-8-name-text: "社会民主党";
+    in-out property<bool> party-9-visible: true;
+    in-out property<length> party-9-button-x: 23px;
+    in-out property<length> party-9-button-y: 479px;
+    in-out property<string> party-9-name-text: "参政党";
+    in-out property<bool> party-highlighted-visible: true;
+    in-out property<length> party-highlighted-x: 0px;
+    in-out property<length> party-highlighted-y: 0px;
+    in-out property<length> party-highlighted-button-x: 13px;
+    in-out property<length> party-highlighted-button-y: 302px;
+    in-out property<string> party-highlighted-name-text: "国民民主党";
+    in-out property<bool> popup-visible: false;
+    in-out property<bool> proportional-representation-visible: false;
+    in-out property<bool> single-member-district-visible: false;
+    in-out property<bool> welcome-visible: true;
+    in-out property<string> welcome-title-text: "マイナンバーカードをタッチして投票を開始してください。";
+    callback candidate-1-button-clicked <=> candidate-1-button.clicked;
+    callback candidate-2-button-clicked <=> candidate-2-button.clicked;
+    callback candidate-3-button-clicked <=> candidate-3-button.clicked;
+    callback candidate-4-button-clicked <=> candidate-4-button.clicked;
+    callback done-clicked <=> done.clicked;
+    callback judge-1-clicked <=> judge-1.clicked;
+    callback judge-2-clicked <=> judge-2.clicked;
+    callback judge-3-clicked <=> judge-3.clicked;
+    callback judge-4-clicked <=> judge-4.clicked;
+    callback next-clicked <=> next.clicked;
+    callback no-clicked <=> no.clicked;
+    callback party-1-button-clicked <=> party-1-button.clicked;
+    callback party-2-button-clicked <=> party-2-button.clicked;
+    callback party-3-button-clicked <=> party-3-button.clicked;
+    callback party-4-button-clicked <=> party-4-button.clicked;
+    callback party-5-button-clicked <=> party-5-button.clicked;
+    callback party-6-button-clicked <=> party-6-button.clicked;
+    callback party-7-button-clicked <=> party-7-button.clicked;
+    callback party-8-button-clicked <=> party-8-button.clicked;
+    callback party-9-button-clicked <=> party-9-button.clicked;
+    callback party-highlighted-button-clicked <=> party-highlighted-button.clicked;
+    callback popup-clicked <=> popup.clicked;
+    callback welcome-clicked <=> welcome.clicked;
+    callback yes-clicked <=> yes.clicked;
+    height: 600px;
+    title: "";
+    width: 1024px;
+    x: 0px;
+    y: 0px;
+    Image {
+        height: 600px;
+        image-fit: contain;
+        source: @image-url("images/495d420518ae54409154f00a4e093cd40dc89f96afefed00a6a0cd977a6e5c9f.png");
+        width: 1280px;
+        x: -128px;
+        y: 0px;
+    }
+    next := TouchArea {
+        height: 145px;
+        visible: root.next-visible;
+        width: 145px;
+        x: 870px;
+        y: 447px;
+        Image {
+            height: 145px;
+            image-fit: contain;
+            source: @image-url("images/1a238db436e7b6526b557498657b58c76825d8ae06ed4cb6038f433cba23dc47_1.png");
+            width: 145px;
+            x: next.pressed ? 2px : 0px;
+            y: self.x;
+            Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Heavy";
+                font-size: 30px;
+                height: 36px;
+                horizontal-alignment: center;
+                text: "つぎへ";
+                vertical-alignment: bottom;
+                width: 95px;
+                x: 21px;
+                y: 54px;
+            }
+            Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Heavy";
+                font-size: 30px;
+                height: 36px;
+                horizontal-alignment: center;
+                text: "つぎへ";
+                vertical-alignment: bottom;
+                width: 95px;
+                x: 21px;
+                y: 54px;
+            }
+        }
+    }
+    header-background := Rectangle {
+        visible: root.header-background-visible;
+        x: 0px;
+        y: 0px;
+        Rectangle {
+            height: 107px;
+            width: 1028px;
+            x: -2px;
+            y: -1px;
+            Rectangle {
+                background: #162b77;
+                height: 104px;
+                width: 1024px;
+                x: 2px;
+                y: 1px;
+            }
+        }
+    }
+    done := TouchArea {
+        visible: root.done-visible;
+        x: 0px;
+        y: 0px;
+        Rectangle {
+            Rectangle {
+                height: 214px;
+                width: 1026px;
+                x: -1px;
+                y: 193px;
+                Rectangle {
+                    background: #162b77;
+                    height: 210px;
+                    width: 1024px;
+                    x: 1px;
+                    y: 2px;
+                }
+            }
+            Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Bold";
+                font-size: 37px;
+                height: 46px;
+                horizontal-alignment: center;
+                text: "投票が完了しました";
+                vertical-alignment: bottom;
+                width: 340px;
+                x: 344px;
+                y: 282px;
+            }
+        }
+    }
+    national-review-of-supreme-court-justices := Rectangle {
+        visible: root.national-review-of-supreme-court-justices-visible;
+        x: 0px;
+        y: 0px;
+        judge-1 := TouchArea {
+            height: 136px;
+            visible: true;
+            width: 393px;
+            x: 22px;
+            y: 142px;
+            Rectangle {
+                height: 136px;
+                width: 393px;
+                x: judge-1.pressed ? 2px : 0px;
+                y: self.x;
+                Rectangle {
+                    background: #ffffff;
+                    height: 132px;
+                    width: 390px;
+                    x: 2px;
+                    y: 2px;
+                }
+            }
+        }
+        Text {
+            color: #000000;
+            font-family: "RyuminPro-Bold";
+            font-size: 44px;
+            height: 55px;
+            horizontal-alignment: center;
+            text: "山田太郎";
+            vertical-alignment: bottom;
+            width: 197px;
+            x: 171px;
+            y: 190px;
+        }
+        Rectangle {
+            height: 83px;
+            width: 82px;
+            x: 63px;
+            y: 169px;
+            Rectangle {
+                background: #d5d5d5;
+                height: 80px;
+                width: 80px;
+                x: 1px;
+                y: 1px;
+            }
+        }
+        judge-1-checked2 := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-1-checked2-visible;
+            width: 46px;
+            x: 81px;
+            y: 188px;
+            MoveTo {
+                x: 44;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 44;
+                x: 6;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 39;
+                x: 2;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 1;
+                x: 40;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 6;
+                x: 44;
+                y: 6;
+            }
+        }
+        judge-1-checked := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-1-checked-visible;
+            width: 46px;
+            x: 81px;
+            y: 188px;
+            MoveTo {
+                x: 6;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 39;
+                x: 44;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 44;
+                x: 40;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 6;
+                x: 2;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 1;
+                x: 6;
+                y: 1;
+            }
+        }
+        judge-2 := TouchArea {
+            height: 136px;
+            visible: true;
+            width: 392px;
+            x: 458px;
+            y: 142px;
+            Rectangle {
+                height: 136px;
+                width: 392px;
+                x: judge-2.pressed ? 2px : 0px;
+                y: self.x;
+                Rectangle {
+                    background: #ffffff;
+                    height: 132px;
+                    width: 390px;
+                    x: 1px;
+                    y: 2px;
+                }
+            }
+        }
+        Text {
+            color: #000000;
+            font-family: "RyuminPro-Bold";
+            font-size: 44px;
+            height: 55px;
+            horizontal-alignment: center;
+            text: "鈴木太郎";
+            vertical-alignment: bottom;
+            width: 197px;
+            x: 608px;
+            y: 186px;
+        }
+        Rectangle {
+            height: 83px;
+            width: 82px;
+            x: 498px;
+            y: 169px;
+            Rectangle {
+                background: #d5d5d5;
+                height: 80px;
+                width: 80px;
+                x: 1px;
+                y: 1px;
+            }
+        }
+        judge-2-checked2 := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-2-checked2-visible;
+            width: 46px;
+            x: 516px;
+            y: 188px;
+            MoveTo {
+                x: 44;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 44;
+                x: 6;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 39;
+                x: 2;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 1;
+                x: 40;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 6;
+                x: 44;
+                y: 6;
+            }
+        }
+        judge-2-checked := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-2-checked-visible;
+            width: 46px;
+            x: 516px;
+            y: 188px;
+            MoveTo {
+                x: 6;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 39;
+                x: 44;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 44;
+                x: 40;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 6;
+                x: 2;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 1;
+                x: 6;
+                y: 1;
+            }
+        }
+        judge-3 := TouchArea {
+            height: 136px;
+            visible: true;
+            width: 393px;
+            x: 22px;
+            y: 291px;
+            Rectangle {
+                height: 136px;
+                width: 393px;
+                x: judge-3.pressed ? 2px : 0px;
+                y: self.x;
+                Rectangle {
+                    background: #ffffff;
+                    height: 132px;
+                    width: 390px;
+                    x: 2px;
+                    y: 2px;
+                }
+            }
+        }
+        Text {
+            color: #000000;
+            font-family: "RyuminPro-Bold";
+            font-size: 44px;
+            height: 55px;
+            horizontal-alignment: center;
+            text: "高橋太郎";
+            vertical-alignment: bottom;
+            width: 197px;
+            x: 174px;
+            y: 335px;
+        }
+        Rectangle {
+            height: 83px;
+            width: 82px;
+            x: 63px;
+            y: 318px;
+            Rectangle {
+                background: #d5d5d5;
+                height: 80px;
+                width: 80px;
+                x: 1px;
+                y: 1px;
+            }
+        }
+        judge-3-checked2 := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-3-checked2-visible;
+            width: 46px;
+            x: 81px;
+            y: 336px;
+            MoveTo {
+                x: 44;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 44;
+                x: 6;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 39;
+                x: 2;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 1;
+                x: 40;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 6;
+                x: 44;
+                y: 6;
+            }
+        }
+        judge-3-checked := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-3-checked-visible;
+            width: 46px;
+            x: 81px;
+            y: 336px;
+            MoveTo {
+                x: 6;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 39;
+                x: 44;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 44;
+                x: 40;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 6;
+                x: 2;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 1;
+                x: 6;
+                y: 1;
+            }
+        }
+        judge-4 := TouchArea {
+            height: 136px;
+            visible: true;
+            width: 392px;
+            x: 458px;
+            y: 291px;
+            Rectangle {
+                height: 136px;
+                width: 392px;
+                x: judge-4.pressed ? 2px : 0px;
+                y: self.x;
+                Rectangle {
+                    background: #ffffff;
+                    height: 132px;
+                    width: 390px;
+                    x: 1px;
+                    y: 2px;
+                }
+            }
+        }
+        Text {
+            color: #000000;
+            font-family: "RyuminPro-Bold";
+            font-size: 44px;
+            height: 55px;
+            horizontal-alignment: center;
+            text: "佐藤太郎";
+            vertical-alignment: bottom;
+            width: 197px;
+            x: 609px;
+            y: 336px;
+        }
+        Rectangle {
+            height: 83px;
+            width: 82px;
+            x: 498px;
+            y: 318px;
+            Rectangle {
+                background: #d5d5d5;
+                height: 80px;
+                width: 80px;
+                x: 1px;
+                y: 1px;
+            }
+        }
+        judge-4-checked2 := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-4-checked2-visible;
+            width: 46px;
+            x: 516px;
+            y: 336px;
+            MoveTo {
+                x: 44;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 44;
+                x: 6;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 39;
+                x: 2;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 1;
+                x: 40;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 6;
+                x: 44;
+                y: 6;
+            }
+        }
+        judge-4-checked := Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 45px;
+            stroke: transparent;
+            stroke-width: 1px;
+            visible: root.judge-4-checked-visible;
+            width: 46px;
+            x: 516px;
+            y: 336px;
+            MoveTo {
+                x: 6;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 6;
+                control-1-y: 1;
+                control-2-x: 44;
+                control-2-y: 39;
+                x: 44;
+                y: 39;
+            }
+            CubicTo {
+                control-1-x: 44;
+                control-1-y: 39;
+                control-2-x: 40;
+                control-2-y: 44;
+                x: 40;
+                y: 44;
+            }
+            CubicTo {
+                control-1-x: 40;
+                control-1-y: 44;
+                control-2-x: 2;
+                control-2-y: 6;
+                x: 2;
+                y: 6;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 6;
+                control-2-x: 6;
+                control-2-y: 1;
+                x: 6;
+                y: 1;
+            }
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 29px;
+            height: 36px;
+            horizontal-alignment: center;
+            text: "やめさせたい裁判官の　　 を押して「つぎへ」";
+            vertical-alignment: bottom;
+            width: 629px;
+            x: 369px;
+            y: 35px;
+        }
+        Rectangle {
+            height: 52px;
+            width: 52px;
+            x: 674px;
+            y: 25px;
+            Rectangle {
+                background: #d5d5d5;
+                height: 49px;
+                width: 49px;
+                x: 1px;
+                y: 1px;
+            }
+        }
+        Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 29px;
+            stroke: transparent;
+            stroke-width: 1px;
+            width: 30px;
+            x: 685px;
+            y: 37px;
+            MoveTo {
+                x: 28;
+                y: 4;
+            }
+            CubicTo {
+                control-1-x: 28;
+                control-1-y: 4;
+                control-2-x: 4;
+                control-2-y: 27;
+                x: 4;
+                y: 27;
+            }
+            CubicTo {
+                control-1-x: 4;
+                control-1-y: 27;
+                control-2-x: 2;
+                control-2-y: 25;
+                x: 2;
+                y: 25;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 25;
+                control-2-x: 25;
+                control-2-y: 1;
+                x: 25;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 25;
+                control-1-y: 1;
+                control-2-x: 28;
+                control-2-y: 4;
+                x: 28;
+                y: 4;
+            }
+        }
+        Path {
+            fill: #929292;
+            fill-rule: evenodd;
+            height: 29px;
+            stroke: transparent;
+            stroke-width: 1px;
+            width: 30px;
+            x: 685px;
+            y: 37px;
+            MoveTo {
+                x: 4;
+                y: 1;
+            }
+            CubicTo {
+                control-1-x: 4;
+                control-1-y: 1;
+                control-2-x: 28;
+                control-2-y: 25;
+                x: 28;
+                y: 25;
+            }
+            CubicTo {
+                control-1-x: 28;
+                control-1-y: 25;
+                control-2-x: 25;
+                control-2-y: 27;
+                x: 25;
+                y: 27;
+            }
+            CubicTo {
+                control-1-x: 25;
+                control-1-y: 27;
+                control-2-x: 2;
+                control-2-y: 4;
+                x: 2;
+                y: 4;
+            }
+            CubicTo {
+                control-1-x: 2;
+                control-1-y: 4;
+                control-2-x: 4;
+                control-2-y: 1;
+                x: 4;
+                y: 1;
+            }
+        }
+        Rectangle {
+            height: 65px;
+            width: 5px;
+            x: 336px;
+            y: 19px;
+            Rectangle {
+                background: #ffffff;
+                height: 62px;
+                width: 2px;
+                x: 2px;
+                y: 2px;
+            }
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 37px;
+            height: 46px;
+            horizontal-alignment: center;
+            text: "国民審査";
+            vertical-alignment: bottom;
+            width: 153px;
+            x: 98px;
+            y: 32px;
+        }
+    }
+    proportional-representation := Rectangle {
+        visible: root.proportional-representation-visible;
+        x: 0px;
+        y: 0px;
+        party-highlighted := Rectangle {
+            visible: root.party-highlighted-visible;
+            x: root.party-highlighted-x;
+            y: root.party-highlighted-y;
+            party-highlighted-button := TouchArea {
+                height: 75px;
+                visible: true;
+                width: 411px;
+                x: root.party-highlighted-button-x;
+                y: root.party-highlighted-button-y;
+                Rectangle {
+                    height: 75px;
+                    width: 411px;
+                    x: party-highlighted-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ff803b;
+                        height: 73px;
+                        width: 408px;
+                        x: 2px;
+                        y: 1px;
+                    }
+                }
+            }
+            party-highlighted-name := Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-highlighted-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 101px;
+                y: 318px;
+            }
+        }
+        party-1 := Rectangle {
+            visible: root.party-1-visible;
+            x: 0px;
+            y: 0px;
+            party-1-button := TouchArea {
+                height: 77px;
+                visible: true;
+                width: 392px;
+                x: root.party-1-button-x;
+                y: root.party-1-button-y;
+                Rectangle {
+                    height: 77px;
+                    width: 392px;
+                    x: party-1-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-1-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-1-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 99px;
+                y: 141px;
+            }
+        }
+        party-2 := Rectangle {
+            visible: root.party-2-visible;
+            x: 0px;
+            y: 0px;
+            party-2-button := TouchArea {
+                height: 77px;
+                visible: true;
+                width: 392px;
+                x: root.party-2-button-x;
+                y: root.party-2-button-y;
+                Rectangle {
+                    height: 77px;
+                    width: 392px;
+                    x: party-2-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-2-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-2-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 536px;
+                y: 140px;
+            }
+        }
+        party-3 := Rectangle {
+            visible: root.party-3-visible;
+            x: 0px;
+            y: 0px;
+            party-3-button := TouchArea {
+                height: 76px;
+                visible: true;
+                width: 392px;
+                x: root.party-3-button-x;
+                y: root.party-3-button-y;
+                Rectangle {
+                    height: 76px;
+                    width: 392px;
+                    x: party-3-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-3-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-3-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 140px;
+                x: 149px;
+                y: 229px;
+            }
+        }
+        party-4 := Rectangle {
+            visible: root.party-4-visible;
+            x: 0px;
+            y: 0px;
+            party-4-button := TouchArea {
+                height: 76px;
+                visible: true;
+                width: 392px;
+                x: root.party-4-button-x;
+                y: root.party-4-button-y;
+                Rectangle {
+                    height: 76px;
+                    width: 392px;
+                    x: party-4-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-4-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-4-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 281px;
+                x: 509px;
+                y: 229px;
+            }
+        }
+        party-5 := Rectangle {
+            visible: root.party-5-visible;
+            x: 0px;
+            y: 0px;
+            party-5-button := TouchArea {
+                height: 76px;
+                visible: true;
+                width: 392px;
+                x: root.party-5-button-x;
+                y: root.party-5-button-y;
+                Rectangle {
+                    height: 76px;
+                    width: 392px;
+                    x: party-5-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 1px;
+                    }
+                }
+            }
+            party-5-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-5-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 101px;
+                y: 318px;
+            }
+        }
+        party-6 := Rectangle {
+            visible: root.party-6-visible;
+            x: 0px;
+            y: 0px;
+            party-6-button := TouchArea {
+                height: 77px;
+                visible: true;
+                width: 392px;
+                x: root.party-6-button-x;
+                y: root.party-6-button-y;
+                Rectangle {
+                    height: 77px;
+                    width: 392px;
+                    x: party-6-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-6-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-6-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 532px;
+                y: 316px;
+            }
+        }
+        party-7 := Rectangle {
+            visible: root.party-7-visible;
+            x: 0px;
+            y: 0px;
+            party-7-button := TouchArea {
+                height: 76px;
+                visible: true;
+                width: 392px;
+                x: root.party-7-button-x;
+                y: root.party-7-button-y;
+                Rectangle {
+                    height: 76px;
+                    width: 392px;
+                    x: party-7-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 1px;
+                    }
+                }
+            }
+            party-7-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-7-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 281px;
+                x: 78px;
+                y: 407px;
+            }
+        }
+        party-8 := Rectangle {
+            visible: root.party-8-visible;
+            x: 0px;
+            y: 0px;
+            party-8-button := TouchArea {
+                height: 76px;
+                visible: true;
+                width: 392px;
+                x: root.party-8-button-x;
+                y: root.party-8-button-y;
+                Rectangle {
+                    height: 76px;
+                    width: 392px;
+                    x: party-8-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 1px;
+                    }
+                }
+            }
+            party-8-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-8-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 234px;
+                x: 538px;
+                y: 407px;
+            }
+        }
+        party-9 := Rectangle {
+            visible: root.party-9-visible;
+            x: 0px;
+            y: 0px;
+            party-9-button := TouchArea {
+                height: 77px;
+                visible: true;
+                width: 392px;
+                x: root.party-9-button-x;
+                y: root.party-9-button-y;
+                Rectangle {
+                    height: 77px;
+                    width: 392px;
+                    x: party-9-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 73px;
+                        width: 389px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            party-9-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 42px;
+                height: 52px;
+                horizontal-alignment: center;
+                text: root.party-9-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 140px;
+                x: 150px;
+                y: 495px;
+            }
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 29px;
+            height: 36px;
+            horizontal-alignment: center;
+            text: "政党を選択して「つぎへ」を押してください";
+            vertical-alignment: bottom;
+            width: 590px;
+            x: 370px;
+            y: 35px;
+        }
+        Rectangle {
+            height: 65px;
+            width: 5px;
+            x: 336px;
+            y: 19px;
+            Rectangle {
+                background: #ffffff;
+                height: 62px;
+                width: 2px;
+                x: 2px;
+                y: 2px;
+            }
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 37px;
+            height: 46px;
+            horizontal-alignment: center;
+            text: "比例代表の投票";
+            vertical-alignment: bottom;
+            width: 265px;
+            x: 45px;
+            y: 32px;
+        }
+    }
+    single-member-district := Rectangle {
+        visible: root.single-member-district-visible;
+        x: 0px;
+        y: 0px;
+        candidate-highlighted := Rectangle {
+            visible: root.candidate-highlighted-visible;
+            x: root.candidate-highlighted-x;
+            y: root.candidate-highlighted-y;
+            candidate-highlighted-button := Rectangle {
+                height: 136px;
+                visible: true;
+                width: 411px;
+                x: root.candidate-highlighted-button-x;
+                y: root.candidate-highlighted-button-y;
+                Rectangle {
+                    background: #ff803b;
+                    height: 132px;
+                    width: 409px;
+                    x: 1px;
+                    y: 2px;
+                }
+            }
+            candidate-highlighted-line := Rectangle {
+                height: 4px;
+                visible: true;
+                width: 364px;
+                x: 472px;
+                y: 193px;
+                Rectangle {
+                    background: #ffffff;
+                    height: 2px;
+                    width: 361px;
+                    x: 1px;
+                    y: 1px;
+                }
+            }
+            candidate-highlighted-name := Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Bold";
+                font-size: 44px;
+                height: 55px;
+                horizontal-alignment: center;
+                text: root.candidate-highlighted-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 197px;
+                x: 507px;
+                y: 209px;
+            }
+            candidate-highlighted-party := Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Bold";
+                font-size: 23px;
+                height: 29px;
+                horizontal-alignment: center;
+                text: root.candidate-highlighted-party-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 77px;
+                x: 513px;
+                y: 157px;
+            }
+        }
+        candidate-4 := Rectangle {
+            visible: root.candidate-4-visible;
+            x: 0px;
+            y: 0px;
+            candidate-4-button := TouchArea {
+                height: 136px;
+                visible: true;
+                width: 392px;
+                x: root.candidate-4-button-x;
+                y: root.candidate-4-button-y;
+                Rectangle {
+                    height: 136px;
+                    width: 392px;
+                    x: candidate-4-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 132px;
+                        width: 390px;
+                        x: 1px;
+                        y: 2px;
+                    }
+                }
+            }
+            Rectangle {
+                height: 4px;
+                width: 364px;
+                x: 472px;
+                y: 342px;
+                Rectangle {
+                    background: #162b77;
+                    height: 2px;
+                    width: 361px;
+                    x: 1px;
+                    y: 1px;
+                }
+            }
+            candidate-4-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 44px;
+                height: 55px;
+                horizontal-alignment: center;
+                text: root.candidate-4-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 197px;
+                x: 507px;
+                y: 359px;
+            }
+            candidate-4-party := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 23px;
+                height: 29px;
+                horizontal-alignment: center;
+                text: root.candidate-4-party-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 77px;
+                x: 513px;
+                y: 306px;
+            }
+        }
+        candidate-3 := Rectangle {
+            visible: root.candidate-3-visible;
+            x: 0px;
+            y: 0px;
+            candidate-3-button := TouchArea {
+                height: 136px;
+                visible: true;
+                width: 393px;
+                x: root.candidate-3-button-x;
+                y: root.candidate-3-button-y;
+                Rectangle {
+                    height: 136px;
+                    width: 393px;
+                    x: candidate-3-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 132px;
+                        width: 390px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            Rectangle {
+                height: 4px;
+                width: 365px;
+                x: 36px;
+                y: 342px;
+                Rectangle {
+                    background: #162b77;
+                    height: 2px;
+                    width: 361px;
+                    x: 2px;
+                    y: 1px;
+                }
+            }
+            candidate-3-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 44px;
+                height: 55px;
+                horizontal-alignment: center;
+                text: root.candidate-3-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 197px;
+                x: 72px;
+                y: 359px;
+            }
+            candidate-3-party := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 23px;
+                height: 29px;
+                horizontal-alignment: center;
+                text: root.candidate-3-party-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 77px;
+                x: 77px;
+                y: 306px;
+            }
+        }
+        candidate-2 := Rectangle {
+            visible: root.candidate-2-visible;
+            x: 0px;
+            y: 0px;
+            candidate-2-button := TouchArea {
+                height: 136px;
+                visible: true;
+                width: 392px;
+                x: root.candidate-2-button-x;
+                y: root.candidate-2-button-y;
+                Rectangle {
+                    height: 136px;
+                    width: 392px;
+                    x: candidate-2-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 132px;
+                        width: 390px;
+                        x: 1px;
+                        y: 2px;
+                    }
+                }
+            }
+            Rectangle {
+                height: 4px;
+                width: 364px;
+                x: 472px;
+                y: 193px;
+                Rectangle {
+                    background: #162b77;
+                    height: 2px;
+                    width: 361px;
+                    x: 1px;
+                    y: 1px;
+                }
+            }
+            candidate-2-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 44px;
+                height: 55px;
+                horizontal-alignment: center;
+                text: root.candidate-2-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 197px;
+                x: 507px;
+                y: 209px;
+            }
+            candidate-2-party := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 23px;
+                height: 29px;
+                horizontal-alignment: center;
+                text: root.candidate-2-party-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 77px;
+                x: 513px;
+                y: 157px;
+            }
+        }
+        candidate-1 := Rectangle {
+            visible: root.candidate-1-visible;
+            x: 0px;
+            y: 0px;
+            candidate-1-button := TouchArea {
+                height: 136px;
+                visible: true;
+                width: 393px;
+                x: root.candidate-1-button-x;
+                y: root.candidate-1-button-y;
+                Rectangle {
+                    height: 136px;
+                    width: 393px;
+                    x: candidate-1-button.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ffffff;
+                        height: 132px;
+                        width: 390px;
+                        x: 2px;
+                        y: 2px;
+                    }
+                }
+            }
+            Rectangle {
+                height: 4px;
+                width: 365px;
+                x: 36px;
+                y: 193px;
+                Rectangle {
+                    background: #162b77;
+                    height: 2px;
+                    width: 361px;
+                    x: 2px;
+                    y: 1px;
+                }
+            }
+            candidate-1-name := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 44px;
+                height: 55px;
+                horizontal-alignment: center;
+                text: root.candidate-1-name-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 197px;
+                x: 72px;
+                y: 209px;
+            }
+            candidate-1-party := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 23px;
+                height: 29px;
+                horizontal-alignment: center;
+                text: root.candidate-1-party-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 77px;
+                x: 77px;
+                y: 157px;
+            }
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 37px;
+            height: 46px;
+            horizontal-alignment: center;
+            text: "小選挙区の投票";
+            vertical-alignment: bottom;
+            width: 265px;
+            x: 45px;
+            y: 32px;
+        }
+        Text {
+            color: #ffffff;
+            font-family: "RyuminPro-Bold";
+            font-size: 29px;
+            height: 36px;
+            horizontal-alignment: center;
+            text: "候補者を選択して「つぎへ」を押してください";
+            vertical-alignment: bottom;
+            width: 620px;
+            x: 370px;
+            y: 35px;
+        }
+        Rectangle {
+            height: 65px;
+            width: 5px;
+            x: 336px;
+            y: 19px;
+            Rectangle {
+                background: #ffffff;
+                height: 62px;
+                width: 2px;
+                x: 2px;
+                y: 2px;
+            }
+        }
+    }
+    welcome := TouchArea {
+        visible: root.welcome-visible;
+        x: 0px;
+        y: 0px;
+        Rectangle {
+            Rectangle {
+                height: 355px;
+                width: 580px;
+                x: 40px;
+                y: 181px;
+                Rectangle {
+                    background: #ffffff;
+                    height: 352px;
+                    width: 577px;
+                    x: 1px;
+                    y: 2px;
+                }
+            }
+            Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 35px;
+                height: 159px;
+                horizontal-alignment: center;
+                text: "・小選挙区\n・比例代表\n・国民審査";
+                vertical-alignment: bottom;
+                width: 218px;
+                x: 213px;
+                y: 334px;
+            }
+            Text {
+                color: #000000;
+                font-family: "RyuminPro-Heavy";
+                font-size: 39px;
+                height: 48px;
+                horizontal-alignment: center;
+                text: "第50回衆議院選挙";
+                vertical-alignment: bottom;
+                width: 402px;
+                x: 127px;
+                y: 228px;
+            }
+            Image {
+                height: 312px;
+                image-fit: contain;
+                source: @image-url("images/7b1fdd93c488b7fe94fa8fbff800ce18712123b0b37102ab175d20fbbfe91531.png");
+                width: 285px;
+                x: 682px;
+                y: 288px;
+            }
+            welcome-title := Text {
+                color: #ffffff;
+                font-family: "RyuminPro-Bold";
+                font-size: 35px;
+                height: 43px;
+                horizontal-alignment: center;
+                text: root.welcome-title-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 957px;
+                x: 45px;
+                y: 33px;
+            }
+        }
+    }
+    popup := TouchArea {
+        visible: root.popup-visible;
+        x: 0px;
+        y: 0px;
+        Rectangle {
+            Rectangle {
+                height: 602px;
+                opacity: 0.580392;
+                width: 1026px;
+                x: -1px;
+                y: -1px;
+                Rectangle {
+                    background: #a7a7a7;
+                    height: 600px;
+                    width: 1024px;
+                    x: 1px;
+                    y: 1px;
+                }
+            }
+            Rectangle {
+                height: 321px;
+                width: 936px;
+                x: 44px;
+                y: 179px;
+                Rectangle {
+                    background: #ffffff;
+                    height: 319px;
+                    width: 934px;
+                    x: 1px;
+                    y: 1px;
+                }
+            }
+            message := Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 53px;
+                height: 66px;
+                horizontal-alignment: center;
+                text: root.message-text;
+                vertical-alignment: bottom;
+                visible: true;
+                width: 475px;
+                x: 275px;
+                y: 241px;
+            }
+            Text {
+                color: #000000;
+                font-family: "RyuminPro-Bold";
+                font-size: 33px;
+                height: 41px;
+                horizontal-alignment: center;
+                text: "でよろしいですか？";
+                vertical-alignment: bottom;
+                width: 333px;
+                x: 350px;
+                y: 333px;
+            }
+            yes := TouchArea {
+                height: 57px;
+                visible: true;
+                width: 182px;
+                x: 306px;
+                y: 415px;
+                Rectangle {
+                    height: 57px;
+                    width: 182px;
+                    x: yes.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        background: #ff7f3b;
+                        border-radius: 8px;
+                        height: 54px;
+                        width: 178px;
+                        x: 2px;
+                        y: 1px;
+                    }
+                    Text {
+                        color: #ffffff;
+                        font-family: "RyuminPro-Bold";
+                        font-size: 33px;
+                        height: 41px;
+                        horizontal-alignment: center;
+                        text: "はい";
+                        vertical-alignment: bottom;
+                        width: 72px;
+                        x: 55px;
+                        y: 11px;
+                    }
+                    Text {
+                        color: #ffffff;
+                        font-family: "RyuminPro-Bold";
+                        font-size: 33px;
+                        height: 41px;
+                        horizontal-alignment: center;
+                        text: "はい";
+                        vertical-alignment: bottom;
+                        width: 72px;
+                        x: 55px;
+                        y: 11px;
+                    }
+                }
+            }
+            no := TouchArea {
+                height: 59px;
+                visible: true;
+                width: 184px;
+                x: 533px;
+                y: 414px;
+                Rectangle {
+                    height: 59px;
+                    width: 184px;
+                    x: no.pressed ? 2px : 0px;
+                    y: self.x;
+                    Rectangle {
+                        border-color: #ff7f3b;
+                        border-radius: 8px;
+                        border-width: 3px;
+                        height: 60px;
+                        width: 184px;
+                        x: 0px;
+                        y: -1px;
+                    }
+                    Text {
+                        color: #ff803b;
+                        font-family: "RyuminPro-Bold";
+                        font-size: 33px;
+                        height: 41px;
+                        horizontal-alignment: center;
+                        text: "いいえ";
+                        vertical-alignment: bottom;
+                        width: 109px;
+                        x: 37px;
+                        y: 12px;
+                    }
+                    Text {
+                        color: #ff803b;
+                        font-family: "RyuminPro-Bold";
+                        font-size: 33px;
+                        height: 41px;
+                        horizontal-alignment: center;
+                        text: "いいえ";
+                        vertical-alignment: bottom;
+                        width: 109px;
+                        x: 37px;
+                        y: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,262 @@
+import { MainWindow } from "MainWindow.slint";
+
+export component Application inherits MainWindow {
+
+    // basic framework
+    property<int> page_index: 0;
+    function next_page() {
+        root.page_index += 1;
+    }
+    function reset() {
+        root.page_index = 0;
+        root.candidate_highlighted_index = 0;
+        root.party_highlighted_index = 0;
+        judge-1-checked = false;
+        judge-2-checked = false;
+        judge-3-checked = false;
+        judge-4-checked = false;
+        judges = 0;
+    }
+
+    // popup dialog
+    popup-visible:  false;
+    yes-clicked => {
+        root.popup-visible = false; 
+        next_page();
+     }
+    no-clicked => {
+        root.popup-visible = false; 
+    }
+
+    next-visible: root.page_index > 0 && root.page_index < 4;
+    next-clicked => { root.popup-visible = true; }
+
+
+    // welcome page
+    welcome-visible: root.page_index == 0;
+    welcome-title-text: "マイナンバーカードをタッチして投票を開始してください";
+    welcome-clicked => { next_page() }
+
+    // single-member district
+    single-member-district-visible: root.page_index == 1;
+    candidate-highlighted-visible: false;
+    candidate-2-visible: true;
+    candidate-1-party-text: "自民党";
+    candidate-2-party-text: "民主党";
+    candidate-3-party-text: "共和党";
+    candidate-4-party-text: "無所属";
+
+    property <int> candidate_highlighted_index: 0;
+    function candidate_clicked(index: int) {
+        if (root.candidate_highlighted_index == index) {
+            root.candidate_highlighted_index = 0;
+        } else {
+            root.candidate_highlighted_index = index;
+        }
+    }
+    candidate-1-button-clicked => { candidate_clicked(1); }
+    candidate-2-button-clicked => { candidate_clicked(2); }
+    candidate-3-button-clicked => { candidate_clicked(3); }
+    candidate-4-button-clicked => { candidate_clicked(4); }
+    states [
+        candidate0 when root.page_index == 1 && root.candidate_highlighted_index < 1: {
+            message-text: "白票";
+        }
+        candidate1 when root.page_index == 1 && root.candidate_highlighted_index == 1: {
+            candidate-1-visible: false;
+            candidate-highlighted-visible: true;
+            candidate-highlighted-party-text: root.candidate-1-party-text;
+            candidate-highlighted-name-text: root.candidate-1-name-text;
+            candidate-highlighted-x: root.candidate-1-button-x - root.candidate-2-button-x;
+            candidate-highlighted-y: root.candidate-1-button-y - root.candidate-2-button-y;
+            message-text: "\{root.candidate-1-party-text} \{root.candidate-1-name-text}";
+        }
+        candidate2 when root.page_index == 1 && root.candidate_highlighted_index == 2: {
+            candidate-2-visible: false;
+            candidate-highlighted-visible: true;
+            candidate-highlighted-party-text: root.candidate-2-party-text;
+            candidate-highlighted-name-text: root.candidate-2-name-text;
+            candidate-highlighted-x: root.candidate-2-button-x - root.candidate-2-button-x;
+            candidate-highlighted-y: root.candidate-2-button-y - root.candidate-2-button-y; 
+            message-text: "\{root.candidate-2-party-text} \{root.candidate-2-name-text}";
+        }
+        candidate3 when root.page_index == 1 && root.candidate_highlighted_index == 3: {
+            candidate-3-visible: false;
+            candidate-highlighted-visible: true;
+            candidate-highlighted-party-text: root.candidate-3-party-text;
+            candidate-highlighted-name-text: root.candidate-3-name-text;
+            candidate-highlighted-x: root.candidate-3-button-x - root.candidate-2-button-x;
+            candidate-highlighted-y: root.candidate-3-button-y - root.candidate-2-button-y; 
+            message-text: "\{root.candidate-3-party-text} \{root.candidate-3-name-text}";
+        }
+        candidate4 when root.page_index == 1 && root.candidate_highlighted_index == 4: {
+            candidate-4-visible: false;
+            candidate-highlighted-visible: true;
+            candidate-highlighted-party-text: root.candidate-4-party-text;
+            candidate-highlighted-name-text: root.candidate-4-name-text;
+            candidate-highlighted-x: root.candidate-4-button-x - root.candidate-2-button-x;
+            candidate-highlighted-y: root.candidate-4-button-y - root.candidate-2-button-y; 
+            message-text: "\{root.candidate-4-party-text} \{root.candidate-4-name-text}";
+        }
+        party0 when root.page_index == 2 && root.party_highlighted_index < 1: {
+            message-text: "白票";
+        }
+        party1 when root.page_index == 2 && root.party_highlighted_index == 1: {
+            party-1-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-1-name-text;
+            party-highlighted-x: root.party-1-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-1-button-y - root.party-5-button-y;
+            message-text: root.party-1-name-text;
+        }
+        party2 when root.page_index == 2 && root.party_highlighted_index == 2: {
+            party-2-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-2-name-text;
+            party-highlighted-x: root.party-2-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-2-button-y - root.party-5-button-y; 
+            message-text: root.party-2-name-text;
+        }
+        party3 when root.page_index == 2 && root.party_highlighted_index == 3: {
+            party-3-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-3-name-text;
+            party-highlighted-x: root.party-3-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-3-button-y - root.party-5-button-y; 
+            message-text: root.party-3-name-text;
+        }
+        party4 when root.page_index == 2 && root.party_highlighted_index == 4: {
+            party-4-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-4-name-text;
+            party-highlighted-x: root.party-4-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-4-button-y - root.party-5-button-y; 
+            message-text: root.party-4-name-text;
+        }
+        party5 when root.page_index == 2 && root.party_highlighted_index == 5: {
+            party-5-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-5-name-text;
+            party-highlighted-x: root.party-5-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-5-button-y - root.party-5-button-y; 
+            message-text: root.party-5-name-text;
+        }
+        party6 when root.page_index == 2 && root.party_highlighted_index == 6: {
+            party-6-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-6-name-text;
+            party-highlighted-x: root.party-6-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-6-button-y - root.party-5-button-y; 
+            message-text: root.party-6-name-text;
+        }
+        party7 when root.page_index == 2 && root.party_highlighted_index == 7: {
+            party-7-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-7-name-text;
+            party-highlighted-x: root.party-7-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-7-button-y - root.party-5-button-y; 
+            message-text: root.party-7-name-text;
+        }
+        party8 when root.page_index == 2 && root.party_highlighted_index == 8: {
+            party-8-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-8-name-text;
+            party-highlighted-x: root.party-8-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-8-button-y - root.party-5-button-y; 
+            message-text: root.party-8-name-text;
+        }
+        party9 when root.page_index == 2 && root.party_highlighted_index == 9: {
+            party-9-visible: false;
+            party-highlighted-visible: true;
+            party-highlighted-name-text: root.party-9-name-text;
+            party-highlighted-x: root.party-9-button-x - root.party-5-button-x;
+            party-highlighted-y: root.party-9-button-y - root.party-5-button-y; 
+            message-text: root.party-9-name-text;
+        }
+        judges when root.page_index == 3 && root.judges == 0: {
+            message-text: "全員を信任";
+        }
+        judges when root.page_index == 3 && root.judges > 0: {
+            message-text: "\{root.judges}名を不信任";
+        }
+    ]
+
+    // proportional representation
+    proportional-representation-visible: root.page_index == 2;
+    party-highlighted-visible: false;
+    party-5-visible: true;
+
+    property <int> party_highlighted_index: 0;
+    function party_clicked(index: int) {
+        if (root.party_highlighted_index == index) {
+            root.party_highlighted_index = 0;
+        } else {
+            root.party_highlighted_index = index;
+        }
+    }
+    party-1-button-clicked => { party_clicked(1); }
+    party-2-button-clicked => { party_clicked(2); }
+    party-3-button-clicked => { party_clicked(3); }
+    party-4-button-clicked => { party_clicked(4); }
+    party-5-button-clicked => { party_clicked(5); }
+    party-6-button-clicked => { party_clicked(6); }
+    party-7-button-clicked => { party_clicked(7); }
+    party-8-button-clicked => { party_clicked(8); }
+    party-9-button-clicked => { party_clicked(9); }
+
+    national-review-of-supreme-court-justices-visible: root.page_index == 3;
+
+    property <int> judges: 0;
+
+    property<bool> judge-1-checked: false;
+    judge-1-checked-visible: self.judge-1-checked;
+    judge-1-checked2-visible: self.judge-1-checked;
+    judge-1-clicked => { 
+        root.judge-1-checked = !root.judge-1-checked;
+        if (root.judge-1-checked) {
+            root.judges += 1;
+        } else {
+            root.judges -= 1;
+        }
+    }
+
+    property<bool> judge-2-checked: false;
+    judge-2-checked-visible: self.judge-2-checked;
+    judge-2-checked2-visible: self.judge-2-checked;
+    judge-2-clicked => {
+        root.judge-2-checked = !root.judge-2-checked;
+        if (root.judge-2-checked) {
+            root.judges += 1;
+        } else {
+            root.judges -= 1;
+        }
+    }
+
+    property<bool> judge-3-checked: false;
+    judge-3-checked-visible: self.judge-3-checked;
+    judge-3-checked2-visible: self.judge-3-checked;
+    judge-3-clicked => {
+        root.judge-3-checked = !root.judge-3-checked;
+        if (root.judge-3-checked) {
+            root.judges += 1;
+        } else {
+            root.judges -= 1;
+        }
+   }
+
+    property<bool> judge-4-checked: false;
+    judge-4-checked-visible: self.judge-4-checked;
+    judge-4-checked2-visible: self.judge-4-checked;
+    judge-4-clicked => {
+        root.judge-4-checked = !root.judge-4-checked;
+        if (root.judge-4-checked) {
+            root.judges += 1;
+        } else {
+            root.judges -= 1;
+        }
+    }
+
+    done-visible: root.page_index == 4;
+    done-clicked => { reset(); }
+    header-background-visible: root.page_index < 4;
+}
