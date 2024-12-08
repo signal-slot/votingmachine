@@ -1,0 +1,720 @@
+{
+    "exports": {
+        "Flutter": {
+            "fontScaleFactor": 1,
+            "height": 600,
+            "imageScaling": true,
+            "makeCompact": false,
+            "resolution": null,
+            "resolutionIndex": 0,
+            "width": 800
+        },
+        "QtQuick": {
+            "fontScaleFactor": 1,
+            "height": 600,
+            "imageScaling": true,
+            "makeCompact": false,
+            "resolution": null,
+            "resolutionIndex": 8,
+            "width": 1024
+        },
+        "Slint": {
+            "fontScaleFactor": 1.4,
+            "height": 600,
+            "imageScaling": true,
+            "makeCompact": false,
+            "resolution": null,
+            "resolutionIndex": 0,
+            "width": 800
+        }
+    },
+    "layers": {
+        "113": {
+            "id": "party 1 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "137": {
+            "id": "proportional representation",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": false
+        },
+        "267": {
+            "id": "next",
+            "native": 1,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "268": {
+            "name": "レイヤー 1",
+            "native": 0,
+            "type": 1,
+            "visible": true
+        },
+        "270": {
+            "id": "national review of supreme court justices",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": false
+        },
+        "275": {
+            "id": "judge-1-checked",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "278": {
+            "id": "judge-1-checked2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "28": {
+            "id": "header-background",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "283": {
+            "id": "judge-2-checked2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "284": {
+            "id": "judge-2-checked",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "293": {
+            "id": "judge-3-checked2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "294": {
+            "id": "judge-3-checked",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "303": {
+            "id": "judge-4-checked2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "304": {
+            "id": "judge-4-checked",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "325": {
+            "native": 0,
+            "type": 4,
+            "visible": true
+        },
+        "329": {
+            "id": "done",
+            "native": 1,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": false
+        },
+        "346": {
+            "id": "party 9",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "348": {
+            "id": "party 8",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "350": {
+            "id": "party 7",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "352": {
+            "id": "party 6",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "354": {
+            "id": "party 5",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "358": {
+            "id": "party 4",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "360": {
+            "id": "party 3",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "362": {
+            "id": "party 2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "364": {
+            "id": "party 1",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "38": {
+            "id": "welcome",
+            "native": 1,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "382": {
+            "id": "candidate 1",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "46": {
+            "id": "candidate 1 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "5": {
+            "id": "welcome title",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "500": {
+            "id": "popup",
+            "native": 1,
+            "properties": [
+                "visible",
+                "zorder"
+            ],
+            "type": 0,
+            "visible": false
+        },
+        "503": {
+            "id": "message",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "507": {
+            "id": "no",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        },
+        "509": {
+            "name": "ボタン",
+            "native": 0,
+            "type": 1,
+            "visible": true
+        },
+        "519": {
+            "id": "yes",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        },
+        "520": {
+            "name": "ボタン",
+            "native": 0,
+            "type": 1,
+            "visible": true
+        },
+        "629": {
+            "native": 0,
+            "type": 4,
+            "visible": true
+        },
+        "67": {
+            "id": "single member district",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": false
+        },
+        "681": {
+            "id": "candidate 1 party",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "682": {
+            "id": "candidate 1 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "690": {
+            "id": "candidate 2 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "692": {
+            "id": "candidate 2 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "693": {
+            "id": "candidate 2 party",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "694": {
+            "id": "candidate 2",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "702": {
+            "id": "candidate 3 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "704": {
+            "id": "candidate 3 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "705": {
+            "id": "candidate 3 party",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "706": {
+            "id": "candidate 3",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "714": {
+            "id": "candidate 4 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "716": {
+            "id": "candidate 4 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "717": {
+            "id": "candidate 4 party",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "718": {
+            "id": "candidate 4",
+            "native": 0,
+            "properties": [
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "726": {
+            "id": "candidate highlighted button",
+            "native": 0,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "727": {
+            "id": "candidate highlighted line",
+            "native": 0,
+            "type": 0,
+            "visible": true
+        },
+        "728": {
+            "id": "candidate highlighted name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "729": {
+            "id": "candidate highlighted party",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "730": {
+            "id": "candidate highlighted",
+            "native": 0,
+            "properties": [
+                "position",
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "732": {
+            "id": "party 2 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "733": {
+            "id": "party 3 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "734": {
+            "id": "party 4 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "735": {
+            "id": "party 5 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "736": {
+            "id": "party 6 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "741": {
+            "id": "party 7 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "742": {
+            "id": "party 8 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "744": {
+            "id": "party 9 button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "745": {
+            "id": "party 1 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "747": {
+            "id": "party 9 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "748": {
+            "id": "party 8 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "749": {
+            "id": "party 7 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "750": {
+            "id": "party 6 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "751": {
+            "id": "party 5 name",
+            "native": 0,
+            "properties": [
+                "position",
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "757": {
+            "id": "party highlighted button",
+            "native": 1,
+            "properties": [
+                "position"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "758": {
+            "id": "party highlighted name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "759": {
+            "id": "party highlighted",
+            "native": 0,
+            "properties": [
+                "position",
+                "visible"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "760": {
+            "id": "party 4 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "761": {
+            "id": "party 3 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "762": {
+            "id": "party 2 name",
+            "native": 0,
+            "properties": [
+                "text"
+            ],
+            "type": 0,
+            "visible": true
+        },
+        "884": {
+            "id": "judge 4",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        },
+        "890": {
+            "id": "judge 3",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        },
+        "896": {
+            "id": "judge 2",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        },
+        "908": {
+            "id": "judge 1",
+            "native": 1,
+            "type": 0,
+            "visible": true
+        }
+    },
+    "qtpsdparser.hint": 1
+}
